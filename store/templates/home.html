@@ -1,0 +1,27 @@
+{#<html>#}
+{#    <head>#}
+{#        <meta charset="UTF-8">#}
+{#        <title>Strona testowa</title>#}
+{#    </head>#}
+{##}
+{#    <body>#}
+{% extends "base.html" %}
+{% load i18n %}
+{% block body %}
+        <h1>Strona domowa</h1>
+        <h2>
+            Witaj
+            {% if user.is_authenticated %}
+                {% if user.first_name %}
+                    {{user.first_name}}
+                {% else %}
+                    {{user.username}}
+                {% endif %}
+            {% else %}
+                Stranger
+            {% endif %}
+        </h2>
+{% endblock %}
+{#    </body>#}
+{#</html>#}
+

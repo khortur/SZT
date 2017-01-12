@@ -87,3 +87,9 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+*.pyc
+__pycache__
+myvenv
+db.sqlite3
+.DS_Store
